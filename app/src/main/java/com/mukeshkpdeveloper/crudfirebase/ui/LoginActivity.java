@@ -1,17 +1,21 @@
 package com.mukeshkpdeveloper.crudfirebase.ui;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatButton;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -27,7 +31,7 @@ public class LoginActivity extends AppCompatActivity {
     // creating variable for edit text, textview,
     // button, progress bar and firebase auth.
     private TextInputEditText userNameEdt, passwordEdt;
-    private Button loginBtn;
+    private AppCompatButton loginBtn;
     private TextView newUserTV;
     private FirebaseAuth mAuth;
     private ProgressBar loadingPB;
@@ -36,6 +40,19 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            Window window = getWindow();
+            window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+
+            View decorView = window.getDecorView();
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                decorView.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN | View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
+            } else {
+                decorView.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
+            }
+            window.setStatusBarColor(Color.TRANSPARENT);
+        }
         setContentView(R.layout.activity_login);
 
         // initializing all our variables.
