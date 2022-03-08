@@ -1,4 +1,4 @@
-package com.mukeshkpdeveloper.crudfirebase;
+package com.mukeshkpdeveloper.crudfirebase.ui;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -17,6 +17,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.mukeshkpdeveloper.crudfirebase.R;
 
 public class RegisterActivity extends AppCompatActivity {
 
