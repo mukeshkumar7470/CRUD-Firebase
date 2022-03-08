@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Mukesh_Project/CRUDFirebase/app/src/main/res/drawable/container_bg.xml" value="0.1075" />
+        <entry key="..\:/Mukesh_Project/CRUDFirebase/app/src/main/res/drawable/ic_favorite_black_24dp.xml" value="0.1075" />
         <entry key="..\:/Mukesh_Project/CRUDFirebase/app/src/main/res/drawable/ic_logout.xml" value="0.126" />
         <entry key="..\:/Mukesh_Project/CRUDFirebase/app/src/main/res/layout/activity_add_course.xml" value="0.16510416666666666" />
         <entry key="..\:/Mukesh_Project/CRUDFirebase/app/src/main/res/layout/activity_edit_course.xml" value="0.16510416666666666" />
@@ -10,7 +12,9 @@
         <entry key="..\:/Mukesh_Project/CRUDFirebase/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
         <entry key="..\:/Mukesh_Project/CRUDFirebase/app/src/main/res/layout/activity_register.xml" value="0.33" />
         <entry key="..\:/Mukesh_Project/CRUDFirebase/app/src/main/res/layout/bottom_sheet_layout.xml" value="0.1256440745144669" />
+        <entry key="..\:/Mukesh_Project/CRUDFirebase/app/src/main/res/layout/course_rv_item.xml" value="0.33" />
         <entry key="..\:/Mukesh_Project/CRUDFirebase/app/src/main/res/menu/menu_main.xml" value="0.25" />
+        <entry key="..\:/Mukesh_Project/CRUDFirebase/app/src/main/res/mipmap-anydpi-v26/ic_app_icon.xml" value="0.145" />
       </map>
     </option>
   </component>

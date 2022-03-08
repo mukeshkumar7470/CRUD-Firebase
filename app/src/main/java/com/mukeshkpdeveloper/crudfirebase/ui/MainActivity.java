@@ -87,11 +87,16 @@ public class MainActivity extends AppCompatActivity implements CourseRVAdapter.C
     private void getCourses() {
         //on below line clearing our list.
         courseRVModalArrayList.clear();
+        CourseRVModal courseRVModal = new CourseRVModal();
+        courseRVModal.setCourseName("New Test");
+        courseRVModal.setCourseDescription("New Test");
+        courseRVModal.setCoursePrice("00");
+        courseRVModal.setBestSuitedFor("test");
+        courseRVModalArrayList.add(courseRVModal);
         //on below line we are calling add child event listener method to read the data.
         databaseReference.addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
-                //on below line we are hiding our progress bar.
                 loadingPB.setVisibility(View.GONE);
                 //adding snapshot to our array list on below line.
                 courseRVModalArrayList.add(snapshot.getValue(CourseRVModal.class));

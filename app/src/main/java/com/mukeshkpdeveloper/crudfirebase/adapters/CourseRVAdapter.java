@@ -47,10 +47,22 @@ public class CourseRVAdapter extends RecyclerView.Adapter<CourseRVAdapter.ViewHo
         CourseRVModal courseRVModal = courseRVModalArrayList.get(position);
         holder.courseTV.setText(courseRVModal.getCourseName());
         holder.coursePriceTV.setText("Rs. " + courseRVModal.getCoursePrice());
-        Picasso.get().load(courseRVModal.getCourseImg()).into(holder.courseIV);
+
+        if (courseRVModal.getCourseImg() != null) {
+            Picasso.get().load(courseRVModal.getCourseImg()).into(holder.courseIV);
+        } else {
+            holder.courseIV.setBackgroundResource(R.drawable.book1);
+        }
         //adding animation to recycler view item on below line.
         setAnimation(holder.itemView, position);
         holder.courseIV.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                courseClickInterface.onCourseClick(position);
+            }
+        });
+
+        holder.container.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 courseClickInterface.onCourseClick(position);
@@ -74,7 +86,7 @@ public class CourseRVAdapter extends RecyclerView.Adapter<CourseRVAdapter.ViewHo
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
         //creating variable for our image view and text view on below line.
-        private ImageView courseIV;
+        private ImageView courseIV, container;
         private TextView courseTV, coursePriceTV;
 
         public ViewHolder(@NonNull View itemView) {
@@ -82,6 +94,7 @@ public class CourseRVAdapter extends RecyclerView.Adapter<CourseRVAdapter.ViewHo
             //initializing all our variables on below line.
             courseIV = itemView.findViewById(R.id.idIVCourse);
             courseTV = itemView.findViewById(R.id.idTVCOurseName);
+            container = itemView.findViewById(R.id.container);
             coursePriceTV = itemView.findViewById(R.id.idTVCousePrice);
         }
     }
