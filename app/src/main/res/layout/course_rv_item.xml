@@ -20,20 +20,33 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <ImageView
-
-        android:id="@+id/idIVCourse"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card"
         android:layout_width="100dp"
         android:layout_height="150dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         android:layout_marginStart="24dp"
         android:layout_marginLeft="24dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
-        android:scaleType="centerCrop"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/book1" />
+        app:cardElevation="0dp"
+        app:cardBackgroundColor="@color/ligh_meduim_gray"
+        android:background="@drawable/container_bg"
+        app:cardCornerRadius="8dp">
+
+        <ImageView
+            android:id="@+id/idIVCourse"
+            android:layout_width="100dp"
+            android:layout_height="150dp"
+            android:scaleType="centerCrop"
+            android:clipToOutline="true"
+            android:visibility="visible"
+            android:background="@drawable/container_bg"
+            app:srcCompat="@drawable/book1" />
+
+    </androidx.cardview.widget.CardView>
 
     <TextView
         android:textStyle="bold"
@@ -44,7 +57,7 @@
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
         android:text="An American Marriage"
-        app:layout_constraintStart_toEndOf="@+id/idIVCourse"
+        app:layout_constraintStart_toEndOf="@+id/card"
         app:layout_constraintTop_toTopOf="@+id/container" />
 
     <TextView
@@ -55,7 +68,7 @@
         android:layout_marginLeft="16dp"
         android:layout_marginTop="8dp"
         android:text="By Tayari Jones"
-        app:layout_constraintStart_toEndOf="@+id/idIVCourse"
+        app:layout_constraintStart_toEndOf="@+id/card"
         app:layout_constraintTop_toBottomOf="@+id/idTVCOurseName" />
 
     <RatingBar
@@ -66,7 +79,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="8dp"
-        app:layout_constraintStart_toEndOf="@+id/idIVCourse"
+        app:layout_constraintStart_toEndOf="@+id/card"
         app:layout_constraintTop_toBottomOf="@+id/idTVCousePrice" />
 
     <TextView
@@ -88,7 +101,7 @@
         android:layout_marginLeft="16dp"
         android:layout_marginTop="8dp"
         android:text="225 pages | 23 review"
-        app:layout_constraintStart_toEndOf="@+id/idIVCourse"
+        app:layout_constraintStart_toEndOf="@+id/card"
         app:layout_constraintTop_toBottomOf="@+id/item_book_ratingbar" />
 
     <ImageView
