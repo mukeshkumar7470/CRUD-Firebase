@@ -5,6 +5,7 @@
       <map>
         <entry key="..\:/Mukesh_Project/CRUDFirebase/app/src/main/res/drawable/button_back.xml" value="0.1075" />
         <entry key="..\:/Mukesh_Project/CRUDFirebase/app/src/main/res/drawable/container_bg.xml" value="0.1075" />
+        <entry key="..\:/Mukesh_Project/CRUDFirebase/app/src/main/res/drawable/container_bg_card.xml" value="0.11" />
         <entry key="..\:/Mukesh_Project/CRUDFirebase/app/src/main/res/drawable/ic_favorite_black_24dp.xml" value="0.1075" />
         <entry key="..\:/Mukesh_Project/CRUDFirebase/app/src/main/res/drawable/ic_logout.xml" value="0.126" />
         <entry key="..\:/Mukesh_Project/CRUDFirebase/app/src/main/res/layout/activity_add_course.xml" value="0.16510416666666666" />
